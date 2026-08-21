@@ -7,14 +7,14 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://web-xmind.204680.xyz/img/avatar.svg">
 <meta property="article:published_time" content="2026-08-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-08-16T13:07:48.000Z">
+<meta property="article:modified_time" content="2026-08-21T05:59:01.752Z">
 <meta property="article:author" content="xmind-2046">
 <meta property="article:tag" content="Xmind-2046">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="博客">
 <meta property="article:tag" content="技术分享">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://web-xmind.204680.xyz/img/avatar.svg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://web-xmind.204680.xyz/links/index.html"><link rel="preconnect"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css?v=7.3.1"><link rel="stylesheet" href="/pluginsSrc/node-snackbar/dist/snackbar.min.css?v=0.1.16" media="print" onload="this.media='all'"><link rel="stylesheet" href="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.css?v=6.1.14" media="print" onload="this.media='all'"><script>
+<meta name="twitter:image" content="https://web-xmind.204680.xyz/img/avatar.svg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.svg"><link rel="canonical" href="https://web-xmind.204680.xyz/links/index.html"><link rel="preconnect"/><link rel="stylesheet" href="/css/index.css?v=5.7.0"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css?v=7.3.1"><link rel="stylesheet" href="/pluginsSrc/node-snackbar/dist/snackbar.min.css?v=0.1.16" media="print" onload="this.media='all'"><link rel="stylesheet" href="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.css?v=6.1.14" media="print" onload="this.media='all'"><script>
     (() => {
       
     const saveToLocal = {
@@ -114,13 +114,13 @@
       const activateDarkMode = () => {
         document.documentElement.dataset.theme = 'dark'
         if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#0d0d0d')
+          metaThemeColor.setAttribute('content', 'undefined')
         }
       }
       const activateLightMode = () => {
         document.documentElement.dataset.theme = 'light'
         if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#ffffff')
+          metaThemeColor.setAttribute('content', 'undefined')
         }
       }
 
@@ -172,7 +172,7 @@
   </script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
   translate: undefined,
   highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
   copy: {
@@ -213,93 +213,276 @@
   isToc: false,
   pageType: 'page'
 }</script><style>
-/* 页脚左对齐 */
-#footer .footer-other { text-align: left; }
-/* 隐藏主题默认版权块 */
-.post-copyright { display: none; }
-/* 极简版权块（一行） */
-.post-copyright-simple {
-  display: flex;
-  align-items: baseline;
-  white-space: nowrap;
-  padding: .8rem 0;
-  margin-top: .5rem;
-  font-size: .9em;
-  color: var(--second-color);
-  border-top: 1px dashed var(--hr-border);
+:root {
+  --global-bg: #f5f7fb;
+  --card-bg: rgba(255,255,255,0.82);
+  --theme-color: #2d8cff;
+  --text-color: #1f2a37;
+  --second-color: #64748b;
+  --border-color: rgba(148,163,184,0.18);
 }
-.post-copyright-simple .pcs-author { font-weight: 600; color: var(--theme-color); }
-.post-copyright-simple .pcs-link {
-  flex: 1;
-  min-width: 0;
+
+[data-theme='dark'] {
+  --global-bg: #0d1722;
+  --card-bg: rgba(18,28,39,0.92);
+  --theme-color: #72d7f5;
+  --text-color: #edf7ff;
+  --second-color: #b7c9d8;
+  --border-color: rgba(157,207,231,0.2);
+}
+
+body {
+  background-color: var(--global-bg);
+  background-image: url('/img/site-background.svg');
+  background-attachment: fixed;
+  color: var(--text-color);
+}
+
+.avatar-img,
+.avatar img {
+  animation: xmind-avatar-spin 18s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes xmind-avatar-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-img,
+  .avatar img {
+    animation: none;
+  }
+}
+
+#page-header {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme='dark'] #page-header {
+  background: rgba(13,23,34,0.84);
+}
+
+#nav a,
+.menu_item,
+.nav-button {
+  transition: none;
+}
+
+.nav-fixed #nav {
+  background: rgba(255,255,255,0.12);
+}
+
+[data-theme='dark'] .nav-fixed #nav {
+  background: rgba(13,23,34,0.72);
+}
+
+.card-widget,
+.layout > div,
+.post,
+.page,
+.article-container,
+#archive,
+#tag,
+#category,
+.recent-post-item,
+.recent-post-info {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+}
+
+.recent-post-item {
+  border-radius: 14px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 0;
 }
-/* 微信二维码浮层 */
-#wechat-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
+
+.recent-post-item .post_cover {
+  border-radius: 14px 14px 0 0;
+}
+
+.recent-post-item .recent-post-info {
+  padding: 1rem 1rem 0.85rem;
+  border-top: 0;
+}
+
+.recent-post-item .article-title {
+  font-size: 1.08rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.recent-post-item .content {
+  line-height: 1.7;
+  color: var(--second-color);
+}
+
+.post-title,
+.page-title,
+.nav .site-name,
+.post-meta,
+.article-meta {
+  color: var(--text-color);
+}
+
+[data-theme='dark'] .card-widget a,
+[data-theme='dark'] .recent-post-item a,
+[data-theme='dark'] .article-container a,
+[data-theme='dark'] #aside-content .item-headline,
+[data-theme='dark'] .site-data .headline,
+[data-theme='dark'] .site-data .length-num {
+  color: var(--text-color);
+}
+
+[data-theme='dark'] .recent-post-item .content,
+[data-theme='dark'] .post-meta,
+[data-theme='dark'] .article-meta,
+[data-theme='dark'] .card-widget .card-info,
+[data-theme='dark'] .card-widget .card-content {
+  color: var(--second-color);
+}
+
+[data-theme='dark'] .layout > div,
+[data-theme='dark'] .post,
+[data-theme='dark'] .page,
+[data-theme='dark'] #archive,
+[data-theme='dark'] #tag,
+[data-theme='dark'] #category,
+[data-theme='dark'] .recent-post-info,
+[data-theme='dark'] .article-container {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+[data-theme='dark'] #footer,
+[data-theme='dark'] #footer-wrap {
+  color: var(--second-color);
+}
+
+[data-theme='dark'] .article-container blockquote {
+  color: #d5e6f2;
+  background: rgba(114,215,245,0.1);
+  border-left-color: var(--theme-color);
+}
+
+.post-copyright {
   display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, .55);
 }
-#wechat-modal.show { display: flex; }
-#wechat-modal .wechat-card {
-  position: relative;
-  max-width: 320px;
-  padding: 24px;
-  text-align: center;
-  background: #fff;
-  color: #333;
+
+.layout {
+  max-width: 1280px;
+}
+
+.layout > .aside {
+  width: 280px;
+}
+
+.layout > .recent-posts {
+  width: calc(100% - 310px);
+}
+
+.article-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.4rem 1.2rem 2rem;
+}
+
+.article-container p,
+.article-container li,
+.article-container blockquote,
+.article-container td,
+.article-container th {
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+.article-container h1,
+.article-container h2,
+.article-container h3,
+.article-container h4,
+.article-container h5,
+.article-container h6 {
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.article-container pre,
+.article-container code {
   border-radius: 10px;
 }
-#wechat-modal .wechat-qr {
-  width: 240px;
-  height: 240px;
-  margin: 0 auto;
-  background-color: #f5f5f5;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 6px;
+
+.btn,
+.button,
+.pagination a,
+.pagination span,
+.tag-list a,
+.category-list a {
+  border-radius: 999px;
+  transition: none;
 }
-#wechat-modal .wechat-title { margin-bottom: 12px; font-size: 14px; color: #888; }
-#wechat-modal .wechat-id { margin-top: 12px; font-size: 15px; font-weight: 600; }
-#wechat-modal .wechat-close {
-  position: absolute;
-  top: -12px;
-  right: -12px;
-  width: 28px;
-  height: 28px;
-  line-height: 26px;
-  border: 1px solid #eee;
-  border-radius: 50%;
-  background: #fff;
-  color: #888;
-  cursor: pointer;
+
+.flink-list-item:hover,
+.tag-list a:hover,
+.category-list a:hover,
+.recent-post-item:hover {
+  transform: translateY(-1px);
 }
-</style><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Xmind-2046 Lab" type="application/atom+xml">
-</head><body><div class="bg-animation" id="web_bg" style="background-color: #0d0d0d;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page type-link" id="body-wrap"><header class="not-home-page fixed" id="page-header" style="background-image: url(https://web-tuchuang.204680.xyz/file/local/1786876211158_kodex1213-iwseVziW8YY-unsplash.webp);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/favicon.svg" alt="Logo" loading='lazy'><span class="site-name">Xmind-2046 Lab</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">链接</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><div class="flink"><h2 id="我的小站"><a href="#我的小站" class="headerlink" title="我的小站"></a>我的小站</h2><div class="flink-desc">我自己搭建的一些小站</div> <div class="flink-list">
+
+@media (max-width: 1024px) {
+  .layout > .aside {
+    width: 100%;
+  }
+  .layout > .recent-posts {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav {
+    padding-inline: 0.4rem;
+  }
+  .site-branding {
+    padding-top: .35rem;
+  }
+  .menus_items {
+    gap: .2rem;
+  }
+  .nav-item {
+    margin: 0 .1rem;
+  }
+  .recent-post-item .recent-post-info {
+    padding: 0.8rem 0.8rem 0.75rem;
+  }
+  .article-container {
+    padding: 1rem 0.8rem 1.4rem;
+  }
+}
+</style><link rel="alternate" href="/atom.xml" title="Xmind-2046 Lab" type="application/atom+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/site-background.svg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page type-link" id="body-wrap"><header class="not-home-page fixed" id="page-header" style="background-image: url(/img/banner.webp);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/favicon.svg" alt="Logo" loading='lazy'><span class="site-name">Xmind-2046 Lab</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">链接</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><div class="flink"><h2 id="我的小站"><a href="#我的小站" class="headerlink" title="我的小站"></a>我的小站</h2><div class="flink-desc">xiaozhan</div> <div class="flink-list">
   <div class="flink-list-item">
-    <a href="https://web-xmind.204680.xyz" title="Xmind-2046 Lab" target="_blank">
+    <a href="https://web-xmind.204680.xyz" title="xmind-2046" target="_blank">
       <div class="flink-item-icon">
-        <img class="no-lightbox" src="https://web-xmind.204680.xyz/img/avatar.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Xmind-2046 Lab" / loading='lazy'>
+        <img class="no-lightbox" src="https://web-xmind.204680.xyz/img/avatar.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="xmind-2046" / loading='lazy'>
       </div>
-      <div class="flink-item-name">Xmind-2046 Lab</div>
-      <div class="flink-item-desc" title="技术博客主站">技术博客主站</div>
+      <div class="flink-item-name">xmind-2046</div>
+      <div class="flink-item-desc" title="博客主站">博客主站</div>
     </a>
   </div>
   <div class="flink-list-item">
-    <a href="https://web-tuchuang.204680.xyz" title="Xmind-2046 图床" target="_blank">
+    <a href="https://web-tuchuang.204680.xyz" title="图床" target="_blank">
       <div class="flink-item-icon">
-        <img class="no-lightbox" src="https://web-tuchuang.204680.xyz/img/favicon.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="Xmind-2046 图床" / loading='lazy'>
+        <img class="no-lightbox" src="https://web-tuchuang.204680.xyz/img/favicon.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="图床" / loading='lazy'>
       </div>
-      <div class="flink-item-name">Xmind-2046 图床</div>
+      <div class="flink-item-name">图床</div>
       <div class="flink-item-desc" title="个人图床">个人图床</div>
     </a>
-  </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">xmind-2046</div><div class="author-info-description">热爱技术与分享的前端开发</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://weixin.qq.com"><i class="fab fa-weixin"></i><span>WeChat</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://t.me/zslifes" target="_blank" title="Telegram"><i class="fab fa-telegram" style="color: #2CA5E0;"></i></a><a class="social-icon" href="https://x.com/xmail_xz" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #000000;"></i></a><a class="social-icon" href="https://weixin.qq.com" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #07C160;"></i></a><a class="social-icon" href="mailto:xmind-2046@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客 🎉</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/01/01/hello-world/" title="Xmind-2046">Xmind-2046</a><time datetime="2024-12-31T16:00:00.000Z" title="发表于 2025-01-01 00:00:00">2025-01-01</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div>
+  </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">xmind-2046</div><div class="author-info-description">热爱daogu</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://t.me/zslifes" target="_blank" title="Telegram"><i class="fab fa-telegram" style="color: #2CA5E0;"></i></a><a class="social-icon" href="https://x.com/xmail_xz" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #000000;"></i></a><a class="social-icon" href="https://weixin.qq.com" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #07C160;"></i></a><a class="social-icon" href="mailto:xmind-2046@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">技术记录/生活观察</div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div>
           <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="card-category-list-name">随笔</span><span class="card-category-list-count">1</span></a></li>
           </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">博客</a></div></div><div class="card-widget card-archives">
@@ -308,7 +491,7 @@
     <ul class="card-archive-list">
       
         <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/01/">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
             <span class="card-archive-list-date">
               一月 2025
             </span>
@@ -317,74 +500,7 @@
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">51</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-17T08:02:39.682Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text"><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> / <a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js?v=6.1.14"></script><script src="/pluginsSrc/instant.page/instantpage.js?v=5.2.0" type="module"></script><script src="/pluginsSrc/node-snackbar/dist/snackbar.min.js?v=0.1.16"></script><div class="js-pjax"></div><script>
-(function () {
-  // 文章底部极简版权块（一行）
-  const insertCopyright = () => {
-    const anchor = document.querySelector('.post-copyright');
-    if (!anchor) return;
-    if (anchor.nextElementSibling && anchor.nextElementSibling.classList.contains('post-copyright-simple')) return;
-    const div = document.createElement('div');
-    div.className = 'post-copyright-simple';
-    div.innerHTML = '如需转载 / <span class="pcs-author">xmind-2046</span> / <a class="pcs-link" href="' + location.href + '" target="_blank" rel="noopener">' + location.href + '</a>';
-    anchor.parentNode.insertBefore(div, anchor.nextSibling);
-  };
-  // 复制文章时附加统一极简版权（捕获阶段拦截，阻止主题默认文案）
-  const attachCopy = () => {
-    document.addEventListener('copy', e => {
-      const sel = window.getSelection().toString();
-      if (sel.length < 150) return;
-      e.stopImmediatePropagation();
-      e.preventDefault();
-      e.clipboardData.setData('text/plain', sel + '\n\n如需转载 / xmind-2046 / ' + location.href);
-    }, true);
-  };
-  // 微信二维码浮层（拦截所有指向 weixin.qq.com 的社交链接）
-  const WECHAT_IMG = 'https://web-tuchuang.204680.xyz/file/local/1786870952135_微信图片_20260816105812_3_7.webp';
-  let wechatModal = null;
-  const openWechat = () => {
-    if (!wechatModal) {
-      wechatModal = document.createElement('div');
-      wechatModal.id = 'wechat-modal';
-      wechatModal.innerHTML = '<div class="wechat-card">' +
-        '<button class="wechat-close" type="button" aria-label="关闭">&times;</button>' +
-        '<div class="wechat-title">扫码添加微信</div>' +
-        '<div class="wechat-qr" style="background-image:url(\'' + WECHAT_IMG + '\')"></div>' +
-        '<div class="wechat-id">微信号：wu&ta</div>' +
-        '</div>';
-      wechatModal.addEventListener('click', e => {
-        if (e.target.id === 'wechat-modal' || e.target.classList.contains('wechat-close')) {
-          wechatModal.classList.remove('show');
-        }
-      });
-      document.body.appendChild(wechatModal);
-    }
-    wechatModal.classList.add('show');
-  };
-  const bindWechat = () => {
-    document.addEventListener('click', e => {
-      const link = e.target.closest('a[href*="weixin.qq.com"]');
-      if (link) {
-        e.preventDefault();
-        openWechat();
-      }
-    });
-  };
-  if (window.btf && btf.addGlobalFn) {
-    btf.addGlobalFn('pjaxComplete', insertCopyright);
-  }
-  document.addEventListener('DOMContentLoaded', () => {
-    insertCopyright();
-    attachCopy();
-    bindWechat();
-  });
-  if (document.readyState !== 'loading') {
-    insertCopyright();
-    attachCopy();
-    bindWechat();
-  }
-})();
-</script><script src="/pluginsSrc/pjax/pjax.min.js?v=0.2.8" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">51</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-21T05:59:20.536Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text"><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> / <a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js?v=6.1.14"></script><script src="/pluginsSrc/instant.page/instantpage.js?v=5.2.0" type="module"></script><script src="/pluginsSrc/node-snackbar/dist/snackbar.min.js?v=0.1.16"></script><div class="js-pjax"></div><script src="/pluginsSrc/pjax/pjax.min.js?v=0.2.8" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
   const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
   window.pjax = new Pjax({
@@ -442,4 +558,4 @@
       window.location.href = responseURL
     }
   })
-})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>
+})</script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>
