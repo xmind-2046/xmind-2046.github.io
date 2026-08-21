@@ -272,6 +272,9 @@ body {
   background: rgba(255,255,255,0.8);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 [data-theme='dark'] #page-header {
@@ -456,6 +459,13 @@ body {
 }
 
 @media (max-width: 768px) {
+  #page-header {
+    background-image: url('/img/banner-mobile.webp') !important;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
   #nav {
     padding-inline: 0.4rem;
   }

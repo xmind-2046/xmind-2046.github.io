@@ -11,15 +11,6 @@
   </url>
   
   <url>
-    <loc>https://web-xmind.204680.xyz/about/index.html</loc>
-    
-    <lastmod>2026-08-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://web-xmind.204680.xyz/categories/index.html</loc>
     
     <lastmod>2026-08-21</lastmod>
@@ -30,6 +21,15 @@
   
   <url>
     <loc>https://web-xmind.204680.xyz/links/index.html</loc>
+    
+    <lastmod>2026-08-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://web-xmind.204680.xyz/about/index.html</loc>
     
     <lastmod>2026-08-21</lastmod>
     
