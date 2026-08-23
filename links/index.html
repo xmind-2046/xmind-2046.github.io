@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://web-xmind.204680.xyz/img/avatar.svg">
 <meta property="article:published_time" content="2026-08-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-08-23T05:50:04.195Z">
+<meta property="article:modified_time" content="2026-08-23T06:52:10.410Z">
 <meta property="article:author" content="xmind-2046">
 <meta property="article:tag" content="Xmind-2046">
 <meta property="article:tag" content="前端">
@@ -215,7 +215,7 @@
 }</script><style>
 :root {
   --global-bg: #f5f7fb;
-  --card-bg: rgba(255,255,255,0.82);
+  --card-bg: rgba(255,255,255,0.68);
   --theme-color: #2d8cff;
   --text-color: #1f2a37;
   --second-color: #64748b;
@@ -224,7 +224,7 @@
 
 [data-theme='dark'] {
   --global-bg: #0d1722;
-  --card-bg: rgba(18,28,39,0.92);
+  --card-bg: rgba(18,28,39,0.82);
   --theme-color: #72d7f5;
   --text-color: #edf7ff;
   --second-color: #b7c9d8;
@@ -235,7 +235,15 @@ body {
   background-color: var(--global-bg);
   background-image: url('/img/site-background.webp');
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--text-color);
+}
+
+#web_bg {
+  opacity: 0.65;
+  filter: saturate(0.82) contrast(0.92);
 }
 
 .avatar-img,
@@ -257,10 +265,13 @@ body {
 }
 
 #page-header {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
   background-color: rgba(8,22,32,0.38);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -287,6 +298,35 @@ body {
   transition: none;
 }
 
+#blog-info .site-name {
+  display: none;
+}
+
+#nav a,
+#nav .site-name {
+  font-size: 0.9rem;
+}
+
+#page-header.full_page #site-title {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+#page-header.full_page #site-subtitle {
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+body {
+  font-size: 13px;
+}
+
+.card-widget,
+.recent-post-item,
+.article-container {
+  font-size: 0.95rem;
+}
+
 .nav-fixed #nav {
   background: rgba(255,255,255,0.12);
 }
@@ -307,6 +347,8 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   box-shadow: none;
+  -webkit-backdrop-filter: blur(14px) saturate(115%);
+  backdrop-filter: blur(14px) saturate(115%);
 }
 
 .recent-post-item {
@@ -474,7 +516,7 @@ body {
   #page-header {
     background-image: url('/img/banner.svg') !important;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
@@ -511,7 +553,7 @@ body {
   <div class="flink-list-item">
     <a href="https://maxs-tuchuang.204680.xyz" title="图床" target="_blank">
       <div class="flink-item-icon">
-        <img class="no-lightbox" src="https://maxs-tuchuang.204680.xyz/img/favicon.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="图床" / loading='lazy'>
+        <img class="no-lightbox" src="/img/favicon.svg" onerror='this.onerror=null;this.src="/img/friend_404.gif"' alt="图床" / loading='lazy'>
       </div>
       <div class="flink-item-name">图床</div>
       <div class="flink-item-desc" title="个人图床">个人图床</div>
@@ -534,7 +576,7 @@ body {
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">51</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-23T05:50:21.829Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text"><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> / <a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js?v=6.1.14"></script><script src="/pluginsSrc/instant.page/instantpage.js?v=5.2.0" type="module"></script><script src="/pluginsSrc/node-snackbar/dist/snackbar.min.js?v=0.1.16"></script><div class="js-pjax"></div><script src="/pluginsSrc/pjax/pjax.min.js?v=0.2.8" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">51</div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-08-23T06:52:28.337Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text"><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> / <a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js?v=6.1.14"></script><script src="/pluginsSrc/instant.page/instantpage.js?v=5.2.0" type="module"></script><script src="/pluginsSrc/node-snackbar/dist/snackbar.min.js?v=0.1.16"></script><div class="js-pjax"></div><script src="/pluginsSrc/pjax/pjax.min.js?v=0.2.8" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
   const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
   window.pjax = new Pjax({

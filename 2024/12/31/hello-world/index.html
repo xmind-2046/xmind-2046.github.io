@@ -227,7 +227,7 @@
 }</script><style>
 :root {
   --global-bg: #f5f7fb;
-  --card-bg: rgba(255,255,255,0.82);
+  --card-bg: rgba(255,255,255,0.68);
   --theme-color: #2d8cff;
   --text-color: #1f2a37;
   --second-color: #64748b;
@@ -236,7 +236,7 @@
 
 [data-theme='dark'] {
   --global-bg: #0d1722;
-  --card-bg: rgba(18,28,39,0.92);
+  --card-bg: rgba(18,28,39,0.82);
   --theme-color: #72d7f5;
   --text-color: #edf7ff;
   --second-color: #b7c9d8;
@@ -247,7 +247,15 @@ body {
   background-color: var(--global-bg);
   background-image: url('/img/site-background.webp');
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--text-color);
+}
+
+#web_bg {
+  opacity: 0.65;
+  filter: saturate(0.82) contrast(0.92);
 }
 
 .avatar-img,
@@ -269,10 +277,13 @@ body {
 }
 
 #page-header {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
   background-color: rgba(8,22,32,0.38);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -299,6 +310,35 @@ body {
   transition: none;
 }
 
+#blog-info .site-name {
+  display: none;
+}
+
+#nav a,
+#nav .site-name {
+  font-size: 0.9rem;
+}
+
+#page-header.full_page #site-title {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+#page-header.full_page #site-subtitle {
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+body {
+  font-size: 13px;
+}
+
+.card-widget,
+.recent-post-item,
+.article-container {
+  font-size: 0.95rem;
+}
+
 .nav-fixed #nav {
   background: rgba(255,255,255,0.12);
 }
@@ -319,6 +359,8 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   box-shadow: none;
+  -webkit-backdrop-filter: blur(14px) saturate(115%);
+  backdrop-filter: blur(14px) saturate(115%);
 }
 
 .recent-post-item {
@@ -486,7 +528,7 @@ body {
   #page-header {
     background-image: url('/img/banner.svg') !important;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
@@ -516,7 +558,7 @@ body {
 <li>效率工具与工作流分享</li>
 </ul>
 <h2 id="快速开始写作"><a href="#快速开始写作" class="headerlink" title="快速开始写作"></a>快速开始写作</h2><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>如有帮助！</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://github.com/xmind-2046">xmind-2046</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://web-xmind.204680.xyz/2024/12/31/hello-world/">https://web-xmind.204680.xyz/2024/12/31/hello-world/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://web-xmind.204680.xyz" target="_blank">xmind-2046</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.svg" data-sites="x,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css?v=1.1.6" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js?v=1.1.6" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">xmind-2046</div><div class="author-info-description">热爱daogu</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://t.me/zslifes" target="_blank" title="Telegram"><i class="fab fa-telegram" style="color: #2CA5E0;"></i></a><a class="social-icon" href="https://x.com/xmail_xz" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #000000;"></i></a><a class="social-icon" href="https://maxs-tuchuang.204680.xyz/file/web-onlin/chat-tool-wx" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #07C160;"></i></a><a class="social-icon" href="mailto:xmind-2046@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">技术记录/生活观察</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E9%87%8C%E6%9C%89%E4%BB%80%E4%B9%88"><span class="toc-number">1.</span> <span class="toc-text">这里有什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B%E5%86%99%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">快速开始写作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">3.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text"><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> / <a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js?v=6.1.14"></script><script src="/pluginsSrc/instant.page/instantpage.js?v=5.2.0" type="module"></script><script src="/pluginsSrc/node-snackbar/dist/snackbar.min.js?v=0.1.16"></script><div class="js-pjax"></div><script src="/pluginsSrc/pjax/pjax.min.js?v=0.2.8" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.svg" data-sites="x,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css?v=1.1.6" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js?v=1.1.6" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.svg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">xmind-2046</div><div class="author-info-description">热爱daogu</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://t.me/zslifes" target="_blank" title="Telegram"><i class="fab fa-telegram" style="color: #2CA5E0;"></i></a><a class="social-icon" href="https://x.com/xmail_xz" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #000000;"></i></a><a class="social-icon" href="https://maxs-tuchuang.204680.xyz/file/web-onlin/chat-tool-wx" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #07C160;"></i></a><a class="social-icon" href="mailto:xmind-2046@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">技术记录/生活观察</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E9%87%8C%E6%9C%89%E4%BB%80%E4%B9%88"><span class="toc-number">1.</span> <span class="toc-text">这里有什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B%E5%86%99%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">快速开始写作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">3.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"></div><div class="footer_custom_text"><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> / <a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.0"></script><script src="/js/main.js?v=5.7.0"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js?v=6.1.14"></script><script src="/pluginsSrc/instant.page/instantpage.js?v=5.2.0" type="module"></script><script src="/pluginsSrc/node-snackbar/dist/snackbar.min.js?v=0.1.16"></script><div class="js-pjax"></div><script src="/pluginsSrc/pjax/pjax.min.js?v=0.2.8" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
   const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
   window.pjax = new Pjax({
