@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 520" role="img" aria-label="Abstract mountain banner">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#122c3a"/>
+      <stop offset="0.55" stop-color="#244b58"/>
+      <stop offset="1" stop-color="#d47752"/>
+    </linearGradient>
+    <linearGradient id="ridge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b202a"/>
+      <stop offset="0.58" stop-color="#173c48"/>
+      <stop offset="1" stop-color="#9f4d3e"/>
+    </linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5c28c" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#f5c28c" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soften"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1920" height="520" fill="url(#sky)"/>
+  <path d="M0 210 C190 125 300 230 475 165 S790 95 960 205 S1280 255 1450 145 S1710 95 1920 178 V520 H0Z" fill="#0c2632" opacity=".62"/>
+  <path d="M0 340 L260 185 465 300 720 112 910 290 1190 150 1400 305 1690 115 1920 245 V520 H0Z" fill="url(#ridge)"/>
+  <path d="M0 420 C230 350 390 385 575 320 S940 355 1140 285 S1510 380 1920 300 V520 H0Z" fill="#081b25" opacity=".72"/>
+  <path d="M760 520 C960 405 1070 285 1235 210 C1365 150 1480 125 1630 75" fill="none" stroke="#e18b60" stroke-width="42" opacity=".58"/>
+  <path d="M760 520 C960 405 1070 285 1235 210 C1365 150 1480 125 1630 75" fill="none" stroke="#f4bb82" stroke-width="3" opacity=".78"/>
+  <path d="M-40 442 C260 355 480 460 735 370 S1210 390 1470 300 S1780 315 1960 240" fill="none" stroke="#79b9ba" stroke-width="2" opacity=".45"/>
+  <ellipse cx="1350" cy="90" rx="360" ry="115" fill="url(#light)" filter="url(#soften)"/>
+</svg>
