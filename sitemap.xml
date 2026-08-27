@@ -4,7 +4,7 @@
   <url>
     <loc>https://web-xmind.204680.xyz/tags/index.html</loc>
     
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,16 +13,16 @@
   <url>
     <loc>https://web-xmind.204680.xyz/links/index.html</loc>
     
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://web-xmind.204680.xyz/categories/index.html</loc>
+    <loc>https://web-xmind.204680.xyz/2026/08/27/Hysteria2-%E7%BA%AFIPv6-VPS-%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</loc>
     
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,16 +31,16 @@
   <url>
     <loc>https://web-xmind.204680.xyz/about/index.html</loc>
     
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://web-xmind.204680.xyz/2024/12/31/hello-world/</loc>
+    <loc>https://web-xmind.204680.xyz/categories/index.html</loc>
     
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-08-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,15 +49,43 @@
 
   <url>
     <loc>https://web-xmind.204680.xyz/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://web-xmind.204680.xyz/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <loc>https://web-xmind.204680.xyz/tags/Hysteria2/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://web-xmind.204680.xyz/tags/VPS/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://web-xmind.204680.xyz/tags/IPv6/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://web-xmind.204680.xyz/tags/%E4%BB%A3%E7%90%86/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://web-xmind.204680.xyz/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -65,8 +93,8 @@
 
   
   <url>
-    <loc>https://web-xmind.204680.xyz/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <loc>https://web-xmind.204680.xyz/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
