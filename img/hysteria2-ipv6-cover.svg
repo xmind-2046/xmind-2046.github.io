@@ -1,36 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
-  <title id="title">纯 IPv6 VPS 搭建 Hysteria 2</title>
-  <desc id="desc">Hysteria 2 IPv6 部署教程标题图</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-label="Hysteria 2 IPv6 节点网络示意">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#102b3a"/>
-      <stop offset="0.68" stop-color="#1d5360"/>
-      <stop offset="1" stop-color="#c96c50"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1024"/>
+      <stop offset="1" stop-color="#16244a"/>
     </linearGradient>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M48 0H0V48" fill="none" stroke="#dff7e9" stroke-opacity=".12"/>
+    <radialGradient id="coreGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2fe6c8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2fe6c8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00d4c8"/>
+      <stop offset="1" stop-color="#0a7dff"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="dots" width="42" height="42" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity="0.06"/>
     </pattern>
   </defs>
-  <rect width="1600" height="960" fill="url(#bg)"/>
-  <rect width="1600" height="960" fill="url(#grid)"/>
-  <g transform="translate(0 200)">
-  <path d="M0 470 C250 390 420 500 690 420 S1120 350 1600 430 V560 H0Z" fill="#081c27" opacity=".82"/>
-  <path d="M850 105 L1120 235 L1355 125 L1515 315 L1280 430 L1010 355 L850 105Z" fill="none" stroke="#dff7e9" stroke-opacity=".62" stroke-width="3"/>
-  <path d="M1120 235 L1280 430 M1355 125 L1280 430 M1010 355 L1515 315" fill="none" stroke="#f4bb82" stroke-opacity=".76" stroke-width="3"/>
-  <path d="M770 45 C980 110 1030 145 1120 235 S1360 430 1540 475" fill="none" stroke="#ffe0ad" stroke-opacity=".86" stroke-width="2"/>
-  <g fill="#f8d39b" stroke="#09202b" stroke-width="5">
-    <circle cx="850" cy="105" r="12"/>
-    <circle cx="1120" cy="235" r="12"/>
-    <circle cx="1355" cy="125" r="12"/>
-    <circle cx="1280" cy="430" r="12"/>
-    <circle cx="1010" cy="355" r="12"/>
+
+  <rect width="1600" height="960" fill="url(#bgGrad)"/>
+  <rect width="1600" height="960" fill="url(#dots)"/>
+
+  <circle cx="800" cy="470" r="340" fill="url(#coreGlow)"/>
+
+  <g stroke="#35e0d0" stroke-width="2.5" opacity="0.45">
+    <line x1="800" y1="470" x2="520" y2="300"/>
+    <line x1="800" y1="470" x2="1090" y2="310"/>
+    <line x1="800" y1="470" x2="1150" y2="560"/>
+    <line x1="800" y1="470" x2="500" y2="620"/>
+    <line x1="800" y1="470" x2="880" y2="210"/>
+    <line x1="800" y1="470" x2="700" y2="740"/>
   </g>
-  <rect x="74" y="72" width="690" height="410" rx="14" fill="#071923" fill-opacity=".78" stroke="#dff7e9" stroke-opacity=".22"/>
-  <rect x="74" y="72" width="7" height="410" rx="3" fill="#f2a36f"/>
-  <text x="124" y="148" fill="#f8d39b" font-size="23" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-weight="700" letter-spacing="2">NETWORK GUIDE</text>
-  <text x="124" y="260" fill="#fff" font-size="58" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-weight="700">纯 IPv6 VPS</text>
-  <text x="124" y="340" fill="#fff" font-size="58" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-weight="700">搭建 Hysteria 2</text>
-  <text x="124" y="405" fill="#b9e5dc" font-size="25" font-family="Segoe UI, Microsoft YaHei, sans-serif">WARP 出口 · SAN 证书 · 稳定运行</text>
-  <text x="124" y="535" fill="#dff7e9" fill-opacity=".72" font-size="20" font-family="Consolas, monospace">IPv6 / UDP 8443</text>
+
+  <g fill="#ffffff">
+    <circle cx="650" cy="378" r="7" filter="url(#glow)"/>
+    <circle cx="960" cy="390" r="7" filter="url(#glow)"/>
+    <circle cx="980" cy="540" r="7" filter="url(#glow)"/>
+    <circle cx="640" cy="558" r="7" filter="url(#glow)"/>
+    <circle cx="845" cy="330" r="7" filter="url(#glow)"/>
+    <circle cx="750" cy="610" r="7" filter="url(#glow)"/>
   </g>
+
+  <g>
+    <circle cx="520" cy="300" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="520" cy="300" r="9" fill="#2fe6c8"/>
+    <circle cx="1090" cy="310" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="1090" cy="310" r="9" fill="#2fe6c8"/>
+    <circle cx="1150" cy="560" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="1150" cy="560" r="9" fill="#2fe6c8"/>
+    <circle cx="500" cy="620" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="500" cy="620" r="9" fill="#2fe6c8"/>
+    <circle cx="880" cy="210" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="880" cy="210" r="9" fill="#2fe6c8"/>
+    <circle cx="700" cy="740" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="700" cy="740" r="9" fill="#2fe6c8"/>
+  </g>
+
+  <g>
+    <circle cx="800" cy="470" r="120" fill="none" stroke="url(#ringGrad)" stroke-width="3" opacity="0.9"/>
+    <circle cx="800" cy="470" r="152" fill="none" stroke="#0a7dff" stroke-width="1.5" stroke-dasharray="6 12" opacity="0.55"/>
+    <circle cx="800" cy="470" r="88" fill="#101d42"/>
+    <circle cx="800" cy="470" r="88" fill="none" stroke="#2fe6c8" stroke-width="2" opacity="0.8"/>
+    <g stroke="#ffffff" stroke-width="10" stroke-linecap="round" filter="url(#glow)">
+      <line x1="768" y1="470" x2="832" y2="470"/>
+      <line x1="800" y1="438" x2="800" y2="502"/>
+    </g>
+  </g>
+
+  <g transform="translate(800, 852)" opacity="0.85">
+    <ellipse cx="-70" cy="10" rx="58" ry="24" fill="#ffffff" opacity="0.16"/>
+    <ellipse cx="-30" cy="-18" rx="46" ry="22" fill="#ffffff" opacity="0.2"/>
+    <ellipse cx="28" cy="-10" rx="52" ry="26" fill="#ffffff" opacity="0.24"/>
+    <ellipse cx="78" cy="8" rx="46" ry="20" fill="#ffffff" opacity="0.14"/>
+    <ellipse cx="0" cy="8" rx="120" ry="34" fill="#ffffff" opacity="0.1"/>
+  </g>
+
+  <g fill="none" stroke="#0a7dff" stroke-width="2" opacity="0.35">
+    <path d="M120 240 a120 120 0 0 1 120 -120"/>
+    <path d="M150 300 a160 160 0 0 1 160 -160"/>
+  </g>
+  <circle cx="126" cy="248" r="5" fill="#2fe6c8" opacity="0.7"/>
 </svg>
