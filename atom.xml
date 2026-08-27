@@ -10,7 +10,7 @@
   <rights>All rights reserved 2026, xmind-2046</rights>
   <subtitle>探索 · 记录 · 分享</subtitle>
   <title>xmind-2046</title>
-  <updated>2026-08-27T09:55:14.306Z</updated>
+  <updated>2026-08-27T10:03:02.087Z</updated>
   <entry>
     <author>
       <name>xmind-2046</name>
@@ -29,6 +29,6 @@
     <published>2026-08-27T09:06:00.000Z</published>
     <summary>面向纯 IPv6 VPS 的 Hysteria 2 搭建全流程：先装 Cloudflare WARP 打通 IPv4 出口，再安装 Hysteria 2、生成带 SAN 的自签证书、客户端固定证书零警告接入，附隐私脱敏示例值。</summary>
     <title>纯 IPv6 VPS 搭建 Hysteria 2 节点：从零到稳定运行的完整教程</title>
-    <updated>2026-08-27T09:55:14.306Z</updated>
+    <updated>2026-08-27T10:03:02.087Z</updated>
   </entry>
 </feed>

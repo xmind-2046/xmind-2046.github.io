@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">纯 IPv6 VPS 搭建 Hysteria 2 节点</title>
+  <desc id="desc">IPv6 网络节点与 Hysteria 2 教程标题图</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102b3a"/>
+      <stop offset="0.58" stop-color="#1d5360"/>
+      <stop offset="1" stop-color="#d26f4f"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#071923" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#071923" stop-opacity=".35"/>
+    </linearGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#b7e1d9" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1290" cy="170" r="170" fill="#f7c28c" opacity=".18" filter="url(#glow)"/>
+  <path d="M0 730 C260 610 400 760 650 655 S1070 550 1600 650 V900 H0Z" fill="#081c27" opacity=".82"/>
+  <path d="M0 770 C230 685 425 810 710 710 S1180 625 1600 715" fill="none" stroke="#8fd2c5" stroke-opacity=".42" stroke-width="3"/>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M930 205 L1170 330 L1370 225 L1490 390 L1290 530 L1050 470 L930 205Z" stroke="#dff7e9" stroke-opacity=".7" stroke-width="3"/>
+    <path d="M1170 330 L1290 530 M1370 225 L1290 530 M1050 470 L1490 390" stroke="#f4bb82" stroke-opacity=".7" stroke-width="3"/>
+    <path d="M850 110 C1030 205 1115 240 1170 330 S1380 535 1535 585" stroke="#f4bb82" stroke-width="9" stroke-opacity=".3"/>
+    <path d="M850 110 C1030 205 1115 240 1170 330 S1380 535 1535 585" stroke="#ffe0ad" stroke-width="2" stroke-opacity=".9"/>
+  </g>
+  <g fill="#f8d39b" stroke="#09202b" stroke-width="6">
+    <circle cx="930" cy="205" r="14"/>
+    <circle cx="1170" cy="330" r="14"/>
+    <circle cx="1370" cy="225" r="14"/>
+    <circle cx="1290" cy="530" r="14"/>
+    <circle cx="1050" cy="470" r="14"/>
+  </g>
+
+  <rect x="86" y="110" width="790" height="570" rx="18" fill="url(#panel)" stroke="#dff7e9" stroke-opacity=".22"/>
+  <rect x="86" y="110" width="8" height="570" rx="4" fill="#f2a36f"/>
+  <text x="145" y="205" fill="#f8d39b" font-size="28" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-weight="700" letter-spacing="3">NETWORK GUIDE / 01</text>
+  <text x="145" y="330" fill="#ffffff" font-size="64" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-weight="700">纯 IPv6 VPS</text>
+  <text x="145" y="420" fill="#ffffff" font-size="64" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-weight="700">搭建 Hysteria 2</text>
+  <text x="145" y="510" fill="#b9e5dc" font-size="32" font-family="Segoe UI, Microsoft YaHei, sans-serif">WARP 出口 · SAN 证书 · 固定证书</text>
+  <text x="145" y="605" fill="#f4bb82" font-size="26" font-family="Consolas, monospace">2001:db8:abcd::1  /  UDP 8443</text>
+
+  <text x="145" y="820" fill="#dff7e9" fill-opacity=".75" font-size="22" font-family="Segoe UI, Microsoft YaHei, sans-serif">从网络连通性到稳定运行的部署记录</text>
+</svg>
