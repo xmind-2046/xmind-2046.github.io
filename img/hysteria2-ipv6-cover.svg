@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
   <title id="title">纯 IPv6 VPS 搭建 Hysteria 2</title>
   <desc id="desc">Hysteria 2 IPv6 部署教程标题图</desc>
   <defs>
@@ -11,8 +11,9 @@
       <path d="M48 0H0V48" fill="none" stroke="#dff7e9" stroke-opacity=".12"/>
     </pattern>
   </defs>
-  <rect width="1600" height="560" fill="url(#bg)"/>
-  <rect width="1600" height="560" fill="url(#grid)"/>
+  <rect width="1600" height="960" fill="url(#bg)"/>
+  <rect width="1600" height="960" fill="url(#grid)"/>
+  <g transform="translate(0 200)">
   <path d="M0 470 C250 390 420 500 690 420 S1120 350 1600 430 V560 H0Z" fill="#081c27" opacity=".82"/>
   <path d="M850 105 L1120 235 L1355 125 L1515 315 L1280 430 L1010 355 L850 105Z" fill="none" stroke="#dff7e9" stroke-opacity=".62" stroke-width="3"/>
   <path d="M1120 235 L1280 430 M1355 125 L1280 430 M1010 355 L1515 315" fill="none" stroke="#f4bb82" stroke-opacity=".76" stroke-width="3"/>
@@ -31,4 +32,5 @@
   <text x="124" y="340" fill="#fff" font-size="58" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-weight="700">搭建 Hysteria 2</text>
   <text x="124" y="405" fill="#b9e5dc" font-size="25" font-family="Segoe UI, Microsoft YaHei, sans-serif">WARP 出口 · SAN 证书 · 稳定运行</text>
   <text x="124" y="535" fill="#dff7e9" fill-opacity=".72" font-size="20" font-family="Consolas, monospace">IPv6 / UDP 8443</text>
+  </g>
 </svg>
