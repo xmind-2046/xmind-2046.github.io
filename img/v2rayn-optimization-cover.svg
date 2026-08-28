@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-label="v2rayN 路由分流与优化示意">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1024"/>
+      <stop offset="1" stop-color="#16244a"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2fe6c8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2fe6c8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00d4c8"/>
+      <stop offset="1" stop-color="#0a7dff"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="dots" width="42" height="42" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="960" fill="url(#bgGrad)"/>
+  <rect width="1600" height="960" fill="url(#dots)"/>
+
+  <circle cx="800" cy="470" r="340" fill="url(#coreGlow)"/>
+
+  <!-- 中心枢纽与出口连线：proxy / direct / block -->
+  <g stroke="#35e0d0" stroke-width="2.5" opacity="0.45">
+    <line x1="800" y1="470" x2="520" y2="300"/>
+    <line x1="800" y1="470" x2="1090" y2="310"/>
+    <line x1="800" y1="470" x2="1150" y2="560"/>
+    <line x1="800" y1="470" x2="500" y2="620"/>
+    <line x1="800" y1="470" x2="880" y2="210"/>
+    <line x1="800" y1="470" x2="700" y2="740"/>
+    <line x1="800" y1="470" x2="330" y2="470"/>
+    <line x1="800" y1="470" x2="1270" y2="470"/>
+  </g>
+
+  <!-- 被滤除的广告节点（block 语义：空心灰点） -->
+  <g opacity="0.6">
+    <line x1="330" y1="470" x2="230" y2="400" stroke="#ffffff" stroke-width="2" stroke-dasharray="5 7" opacity="0.35"/>
+    <circle cx="230" cy="400" r="10" fill="none" stroke="#8b93a7" stroke-width="3"/>
+  </g>
+
+  <g fill="#ffffff">
+    <circle cx="520" cy="300" r="7" filter="url(#glow)"/>
+    <circle cx="1090" cy="310" r="7" filter="url(#glow)"/>
+    <circle cx="1150" cy="560" r="7" filter="url(#glow)"/>
+    <circle cx="500" cy="620" r="7" filter="url(#glow)"/>
+    <circle cx="880" cy="210" r="7" filter="url(#glow)"/>
+    <circle cx="700" cy="740" r="7" filter="url(#glow)"/>
+    <circle cx="1270" cy="470" r="7" filter="url(#glow)"/>
+  </g>
+
+  <g>
+    <circle cx="520" cy="300" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="520" cy="300" r="9" fill="#2fe6c8"/>
+    <circle cx="1090" cy="310" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="1090" cy="310" r="9" fill="#2fe6c8"/>
+    <circle cx="1150" cy="560" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="1150" cy="560" r="9" fill="#2fe6c8"/>
+    <circle cx="500" cy="620" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="500" cy="620" r="9" fill="#2fe6c8"/>
+    <circle cx="880" cy="210" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="880" cy="210" r="9" fill="#2fe6c8"/>
+    <circle cx="700" cy="740" r="26" fill="#0b1024" stroke="#00d4c8" stroke-width="3"/>
+    <circle cx="700" cy="740" r="9" fill="#2fe6c8"/>
+    <circle cx="1270" cy="470" r="26" fill="#0b1024" stroke="#0a7dff" stroke-width="3"/>
+    <circle cx="1270" cy="470" r="9" fill="#0a7dff"/>
+  </g>
+
+  <g>
+    <circle cx="800" cy="470" r="120" fill="none" stroke="url(#ringGrad)" stroke-width="3" opacity="0.9"/>
+    <circle cx="800" cy="470" r="152" fill="none" stroke="#0a7dff" stroke-width="1.5" stroke-dasharray="6 12" opacity="0.55"/>
+    <circle cx="800" cy="470" r="88" fill="#101d42"/>
+    <circle cx="800" cy="470" r="88" fill="none" stroke="#2fe6c8" stroke-width="2" opacity="0.8"/>
+    <!-- 路由选择（三叉）图标 -->
+    <g stroke="#ffffff" stroke-width="9" stroke-linecap="round" filter="url(#glow)">
+      <line x1="800" y1="428" x2="800" y2="512"/>
+      <line x1="800" y1="470" x2="752" y2="438"/>
+      <line x1="800" y1="470" x2="848" y2="438"/>
+      <line x1="800" y1="470" x2="800" y2="512"/>
+    </g>
+  </g>
+
+  <g transform="translate(800, 852)" opacity="0.85">
+    <ellipse cx="-70" cy="10" rx="58" ry="24" fill="#ffffff" opacity="0.16"/>
+    <ellipse cx="-30" cy="-18" rx="46" ry="22" fill="#ffffff" opacity="0.2"/>
+    <ellipse cx="28" cy="-10" rx="52" ry="26" fill="#ffffff" opacity="0.24"/>
+    <ellipse cx="78" cy="8" rx="46" ry="20" fill="#ffffff" opacity="0.14"/>
+    <ellipse cx="0" cy="8" rx="120" ry="34" fill="#ffffff" opacity="0.1"/>
+  </g>
+
+  <g fill="none" stroke="#0a7dff" stroke-width="2" opacity="0.35">
+    <path d="M120 240 a120 120 0 0 1 120 -120"/>
+    <path d="M150 300 a160 160 0 0 1 160 -160"/>
+  </g>
+  <circle cx="126" cy="248" r="5" fill="#2fe6c8" opacity="0.7"/>
+  <circle cx="1360" cy="760" r="5" fill="#2fe6c8" opacity="0.7"/>
+  <path d="M1440 820 a110 110 0 0 1 -110 -110" fill="none" stroke="#0a7dff" stroke-width="2" opacity="0.35"/>
+</svg>
